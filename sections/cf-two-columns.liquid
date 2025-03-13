@@ -1,0 +1,165 @@
+{% style %}
+  {% for block in section.blocks %}
+    .cf-two-column-card-{{ block.id }} .cf-two-columns-content {
+      background-color:{{ block.settings.background_color }};
+      {% if block.settings.background_video == blank %}
+        background-image: url({{ block.settings.background_image | image_url: width: 800, height: 800}});
+        background-size:cover;
+        background-repeat:no-repeat;
+      {% endif %}
+    }
+
+    .cf-two-column-card-{{ block.id }} .cf-two-columns-content-inner > h2{
+      color: {{ block.settings.heading_color }};
+      font-size: {{ block.settings.heading_font_size }}px;
+    }
+    .cf-two-column-card-{{ block.id }} .cf-two-columns-content-inner > p{
+      color: {{ block.settings.description_color }};
+      font-size: {{ block.settings.description_font_size }}px;
+    }
+    .cf-two-column-card-{{ block.id }} .cf-two-columns-content-inner > a{
+      color: {{ block.settings.link_color }};
+      background: {{ block.settings.link_background_color }};
+      font-size: {{ block.settings.link_font_size }}px;
+    }
+    .cf-two-column-card-{{ block.id }} .cf-two-columns-content-inner > a:hover{
+      color: {{ block.settings.link_hover_color }};
+      background: {{ block.settings.link_hover_background_color }};
+    }
+  {% endfor %}
+{% endstyle %}
+
+<section class="cf-two-columns cf-two-columns-{{ section.id }}" id="cf-two-columns">
+  <div class="cf-two-columns-row">
+    <div class="page-width">
+      <div class="cf-two-columns-wrap">
+        {% for block in section.blocks %}
+          {% render 'cf-hero-column-card',
+            background_video: block.settings.background_video,
+            background_image: block.settings.background_image,
+            title: block.settings.title,
+            description: block.settings.description,
+            btn_text: block.settings.btn_text,
+            btn_url: block.settings.btn_url,
+            id: block.id
+          %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "<> Two Columns",
+  "settings": [],
+  "blocks": [
+    {
+      "name":"Card",
+      "type": "card",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "video",
+          "id": "background_video",
+          "label": "A Shopify-hosted video"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#ca4e28"
+        },
+        {
+          "type": "image_picker",
+          "id": "background_image",
+          "label": "Background Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading Here",
+          "default": "TRAVEL FARTHER.HIT THE TRAIL HARDER"
+        },
+         {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Heading Color",
+          "default": "#ca4e28"
+        },
+         {
+          "type": "number",
+          "id": "heading_font_size",
+          "label": "Heading Fontsize",
+          "default": 36
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description Here",
+          "default": "Hardcore Jeep parts that marry form with function. Conquer any terrain with precision-fabricated products, made in the USA."
+        },
+        {
+          "type": "color",
+          "id": "description_color",
+          "label": "Description Color",
+          "default": "#ca4e28"
+        },
+         {
+          "type": "number",
+          "id": "description_font_size",
+          "label": "Description Fontsize",
+          "default": 36
+        },
+        {
+          "type": "url",
+          "id": "btn_url",
+          "label": "Button link",
+          "default": "/"
+        },
+        {
+          "type": "text",
+          "id": "btn_text",
+          "label": "Button Text",
+          "default":"SHOP BY VEHICLE"
+        },
+        {
+          "type": "color",
+          "id": "link_color",
+          "label": "Button Color",
+          "default": "#ca4e28"
+        },
+        {
+          "type": "color",
+          "id": "link_background_color",
+          "label": "Button Background Color",
+          "default": "#ca4e28"
+        },
+         {
+          "type": "number",
+          "id": "link_font_size",
+          "label": "Button Fontsize",
+          "default": 36
+        },
+        {
+          "type": "color",
+          "id": "link_hover_color",
+          "label": "Button Hover Color",
+          "default": "#ca4e28"
+        },
+        {
+          "type": "color",
+          "id": "link_hover_background_color",
+          "label": "Button Hover Background Color",
+          "default": "#ca4e28"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Two Columns"
+    }
+  ]
+}
+{% endschema %}

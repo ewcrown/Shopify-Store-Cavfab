@@ -1,0 +1,49 @@
+<div class="cf-pagination">
+  <div class="pagination">
+      <span class="prev">
+    {% if paginate.previous %}
+        <a
+          href="{{ paginate.previous.url | replace: 'view=ajax', '' }}{{ hash }}"
+          title="{{ 'general.pagination.previous' | t }}"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11" fill="none">
+            <line x1="11" y1="5.5" x2="2" y2="5.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="4.15617" y1="1.90556" x2="1.40556" y2="5.34383" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="4.59444" y1="9.34383" x2="1.84383" y2="5.90556" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="">{{ 'general.pagination.previous' | t }}</span>
+        </a>
+    {% endif %}
+      </span>
+    <div class="cf-pagination-number">
+      {% for part in paginate.parts %}
+        {% if part.is_link %}
+          <span class="page">
+            <a href="{{ part.url | replace: 'view=ajax', '' }}{{ hash }}">{{ part.title }}</a>
+          </span>
+        {% else %}
+          {% if part.title == paginate.current_page %}
+            <span class="page current">{{ part.title }}</span>
+          {% else %}
+            <span class="page">{{ part.title }}</span>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+      <span class="next">
+    {% if paginate.next %}
+        <a
+          href="{{ paginate.next.url | replace: 'view=ajax', '' }}{{ hash }}"
+          title="{{ 'general.pagination.next' | t }}"
+        >
+          <span class="">{{ 'general.pagination.next' | t }}</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11" fill="none">
+            <line x1="1" y1="5.5" x2="10" y2="5.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="7.40556" y1="1.65617" x2="10.1562" y2="5.09444" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="6.84383" y1="9.09444" x2="9.59444" y2="5.65617" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </a>
+    {% endif %}
+      </span>
+  </div>
+</div>

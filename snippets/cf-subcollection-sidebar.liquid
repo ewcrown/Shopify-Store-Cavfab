@@ -1,0 +1,15 @@
+<div class="cf-subcollection-sidebar">
+  <div class="cf-subcollection-sidebar-header">
+    <span>{{ collection.title }}</span>
+    <button class="cf-subcollection-sidebar-header--close" data-close-button>+</button>
+  </div>
+  <div class="cf-subcollection-sidebar-body">
+    <ul>
+      {%- for subcollection in collection.metafields.custom.subcollection.value -%}
+        <li>
+          <a href="{{ subcollection.url }}">{{ subcollection.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

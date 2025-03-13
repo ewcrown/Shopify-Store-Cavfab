@@ -1,0 +1,47 @@
+{% style %}
+  #shopify-section-{{ section.id }} .page-width {
+    background: {{section.settings.bg_color}};
+  }
+{% endstyle %}
+
+
+<section class="cf-review-section" id="cf-review-section">
+  <div class="cf-review-row">
+    <div class="page-width">
+      <div class="cf-review-wrap">
+        <h3>{{ section.settings.title }}</h3>
+        {{ section.settings.review_shortcode }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "<> Review Section",
+  "settings": [
+     {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title Here",
+      "default": "QUALITY YOU CAN TRUST"
+    },
+    {
+      "type": "liquid",
+      "id": "review_shortcode",
+      "label": "Review Shortcode"
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Review Section"
+    }
+  ]
+}
+{% endschema %}

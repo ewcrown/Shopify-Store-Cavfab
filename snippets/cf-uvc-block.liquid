@@ -1,0 +1,24 @@
+<section class="cf-uvc-block" id="cf-uvc-block-{{ block.id }}">
+  <div class="cf-uvc-row">
+    <div class="cf-uvc-wrap">
+      <ul>
+        <li>
+          <a href="{{ block.settings.uvc_url1 }}">
+            {% if block.settings.uvc_image1 != blank %}
+              <img src="{{ block.settings.uvc_image1 | img_url: 'master' }}" class="img-responsive">
+            {% endif %}
+            <span>{{ block.settings.uvc_text1 }}</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{ block.settings.uvc_url2 }}">
+            {% if block.settings.uvc_image2 != blank %}
+              <img src="{{ block.settings.uvc_image2 | img_url: 'master' }}" class="img-responsive">
+            {% endif %}
+            <span>{{ block.settings.uvc_text2 }}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

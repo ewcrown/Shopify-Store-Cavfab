@@ -1,0 +1,16 @@
+<div class="cf-two-column-card cf-two-column-card-{{ id }}">
+  <div class="cf-two-columns-media">
+    {% if background_video != blank %}
+      {{ background_video | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, controls: false }}
+    {% endif %}
+  </div>
+  <div class="cf-two-columns-content">
+    <div class="cf-two-columns-content-inner">
+      <h2>{{ title }}</h2>
+      <p>{{ description }}</p>
+      {% if btn_url != blank %}
+        <a href="{{ btn_url }}" class="btn">{{ btn_text }}</a>
+      {% endif %}
+    </div>
+  </div>
+</div>

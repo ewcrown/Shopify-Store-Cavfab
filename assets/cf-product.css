@@ -1,0 +1,40 @@
+
+/* For screens wider than 1350px */
+@media (min-width: 1350px) and (max-width:1450px) {
+    .site-navigation {
+        width: 95%;
+    }
+}
+
+/* For screens between 1250px and 1349px */
+@media (min-width: 1250px) and (max-width: 1349px) {
+    .site-navigation {
+        width: 90%;
+    }
+
+     #StickyHeaderWrap .header-layout--left-center {
+        padding-right: 80px;
+    }
+}
+
+/* For screens between 1100px and 1249px */
+@media (min-width: 1100px) and (max-width: 1249px) {
+    .site-navigation {
+        width: 90%;
+    }
+
+     #StickyHeaderWrap .header-layout--left-center {
+        padding-right: 80px;
+    }
+}
+
+@media  (max-width: 1100px) {
+    .site-navigation {
+    width: 80%;
+}
+
+       #StickyHeaderWrap .header-layout--left-center {
+        padding-right: 80px;
+    }
+}
+

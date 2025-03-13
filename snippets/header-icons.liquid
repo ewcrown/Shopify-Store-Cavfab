@@ -1,0 +1,109 @@
+<div class="site-nav">
+  <div class="site-nav__icons">
+   
+    {%- if settings.search_enable -%}
+      <a
+        href="{{ routes.search_url }}"
+        class="site-nav__link site-nav__link--icon js-search-header{% if section.settings.main_menu_alignment == 'center' or section.settings.main_menu_alignment == 'center-split' %} medium-up--hide{% endif %}"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+        <circle cx="17.5" cy="17.5" r="17.5" fill="#CA4E28"/>
+        <line x1="20.3005" y1="19.0017" x2="25.5834" y2="24.2936" stroke="white" stroke-width="2"/>
+        <circle cx="16.3591" cy="15.3591" r="6.35908" stroke="white" stroke-width="2"/>
+        </svg>
+        <span class="icon__fallback-text">{{ 'general.search.title' | t }}</span>
+      </a>
+    {%- endif -%}
+            
+    {%- if shop.customer_accounts_enabled -%}
+      <a class="site-nav__link site-nav__link--icon small--hide" href="{{ routes.account_url }}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+          <circle cx="17.5" cy="17.5" r="17.5" fill="#CA4E28"/>
+          <path d="M21.3361 17.6989C22.6497 16.6938 23.5003 15.1148 23.5003 13.3333C23.5003 10.2959 21.0377 7.83325 18.0003 7.83325C14.963 7.83325 12.5003 10.2959 12.5003 13.3333C12.5003 15.1148 13.351 16.6938 14.6646 17.6989C11.5103 19.0766 9.29199 22.3464 9.29199 26.1666H26.7087C26.7087 22.3464 24.4903 19.0766 21.3361 17.6989ZM18.0003 10.1249C19.7695 10.1249 21.2087 11.5641 21.2087 13.3333C21.2087 15.1024 19.7695 16.5416 18.0003 16.5416C16.2312 16.5416 14.792 15.1024 14.792 13.3333C14.792 11.5641 16.2312 10.1249 18.0003 10.1249ZM11.9503 23.8749C12.8331 21.2074 15.2118 19.2916 18.0003 19.2916C20.7888 19.2916 23.1676 21.2074 24.0503 23.8749H11.9503Z" fill="white"/>
+        </svg>
+        <span class="icon__fallback-text">
+          {%- if customer -%}
+            {{ 'layout.customer.account' | t }}
+          {%- else -%}
+            {{ 'layout.customer.log_in' | t }}
+          {%- endif -%}
+        </span>
+      </a>
+    {%- endif -%}
+
+
+    {%- if section.settings.main_menu_alignment == 'left'
+      or section.settings.main_menu_alignment == 'left-center'
+      or section.settings.main_menu_alignment == 'left-drawer'
+    -%}
+      <button
+        type="button"
+        class="site-nav__link site-nav__link--icon js-drawer-open-nav{% if section.settings.main_menu_alignment == 'left' or section.settings.main_menu_alignment == 'left-center' %} medium-up--hide{% endif %}"
+        aria-controls="NavDrawer"
+      >
+        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-hamburger" viewBox="0 0 64 64">
+          <title>icon-hamburger</title><path d="M7 15h51M7 32h43M7 49h51"/>
+        </svg>
+        <span class="icon__fallback-text">{{ 'general.drawers.navigation' | t }}</span>
+      </button>
+    {%- endif -%}
+
+    <a
+      href="{{ routes.cart_url }}"
+      class="site-nav__link site-nav__link--icon js-drawer-open-cart"
+      aria-controls="CartDrawer"
+      data-icon="{{ settings.cart_icon }}"
+    >
+      <span class="cart-link">
+        {%- if settings.cart_icon == 'cart' -%}
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+            <g clip-path="url(#clip0_1_6652)">
+            <path d="M17.5 35C27.165 35 35 27.165 35 17.5C35 7.83502 27.165 0 17.5 0C7.83502 0 0 7.83502 0 17.5C0 27.165 7.83502 35 17.5 35Z" fill="#CA4E28"/>
+            <path d="M13.6318 15.8943L11.8468 9.94755H7.78027V8.42505H12.9712L15.0865 15.448L13.6318 15.8943Z" fill="white"/>
+            <path d="M27.0137 16.1023L24.5998 21.3282H13.7137L12.1857 16.1023H27.0137ZM29.4079 14.571H10.1426L12.5663 22.8595H25.5798L29.4079 14.571Z" fill="white"/>
+            <path d="M14.6866 28.7624C15.9002 28.7624 16.8839 27.7786 16.8839 26.565C16.8839 25.3515 15.9002 24.3677 14.6866 24.3677C13.473 24.3677 12.4893 25.3515 12.4893 26.565C12.4893 27.7786 13.473 28.7624 14.6866 28.7624Z" fill="white"/>
+            <path d="M24.0333 28.7624C25.2468 28.7624 26.2306 27.7786 26.2306 26.565C26.2306 25.3515 25.2468 24.3677 24.0333 24.3677C22.8197 24.3677 21.8359 25.3515 21.8359 26.565C21.8359 27.7786 22.8197 28.7624 24.0333 28.7624Z" fill="white"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_1_6652">
+            <rect width="35" height="35" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+        {%- elsif settings.cart_icon == 'bag-minimal' -%}
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+<g clip-path="url(#clip0_1_6652)">
+<path d="M17.5 35C27.165 35 35 27.165 35 17.5C35 7.83502 27.165 0 17.5 0C7.83502 0 0 7.83502 0 17.5C0 27.165 7.83502 35 17.5 35Z" fill="#CA4E28"/>
+<path d="M13.6318 15.8943L11.8468 9.94755H7.78027V8.42505H12.9712L15.0865 15.448L13.6318 15.8943Z" fill="white"/>
+<path d="M27.0137 16.1023L24.5998 21.3282H13.7137L12.1857 16.1023H27.0137ZM29.4079 14.571H10.1426L12.5663 22.8595H25.5798L29.4079 14.571Z" fill="white"/>
+<path d="M14.6866 28.7624C15.9002 28.7624 16.8839 27.7786 16.8839 26.565C16.8839 25.3515 15.9002 24.3677 14.6866 24.3677C13.473 24.3677 12.4893 25.3515 12.4893 26.565C12.4893 27.7786 13.473 28.7624 14.6866 28.7624Z" fill="white"/>
+<path d="M24.0333 28.7624C25.2468 28.7624 26.2306 27.7786 26.2306 26.565C26.2306 25.3515 25.2468 24.3677 24.0333 24.3677C22.8197 24.3677 21.8359 25.3515 21.8359 26.565C21.8359 27.7786 22.8197 28.7624 24.0333 28.7624Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_1_6652">
+<rect width="35" height="35" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+        {%- else -%}
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+<g clip-path="url(#clip0_1_6652)">
+<path d="M17.5 35C27.165 35 35 27.165 35 17.5C35 7.83502 27.165 0 17.5 0C7.83502 0 0 7.83502 0 17.5C0 27.165 7.83502 35 17.5 35Z" fill="#CA4E28"/>
+<path d="M13.6318 15.8943L11.8468 9.94755H7.78027V8.42505H12.9712L15.0865 15.448L13.6318 15.8943Z" fill="white"/>
+<path d="M27.0137 16.1023L24.5998 21.3282H13.7137L12.1857 16.1023H27.0137ZM29.4079 14.571H10.1426L12.5663 22.8595H25.5798L29.4079 14.571Z" fill="white"/>
+<path d="M14.6866 28.7624C15.9002 28.7624 16.8839 27.7786 16.8839 26.565C16.8839 25.3515 15.9002 24.3677 14.6866 24.3677C13.473 24.3677 12.4893 25.3515 12.4893 26.565C12.4893 27.7786 13.473 28.7624 14.6866 28.7624Z" fill="white"/>
+<path d="M24.0333 28.7624C25.2468 28.7624 26.2306 27.7786 26.2306 26.565C26.2306 25.3515 25.2468 24.3677 24.0333 24.3677C22.8197 24.3677 21.8359 25.3515 21.8359 26.565C21.8359 27.7786 22.8197 28.7624 24.0333 28.7624Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_1_6652">
+<rect width="35" height="35" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+        {%- endif -%}
+        <span class="icon__fallback-text">{{ 'layout.cart.title' | t }}</span>
+        <span class="cart-link__bubble{% if cart.item_count > 0 %} cart-link__bubble--visible{% endif %}"></span>
+      </span>
+    </a>
+  </div>
+</div>

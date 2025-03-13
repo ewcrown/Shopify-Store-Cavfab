@@ -1,0 +1,62 @@
+{%- liquid
+  assign current_filter_size = 0
+
+  for filter in collection.filters
+    assign current_filter_size = current_filter_size | plus: filter.active_values.size
+  endfor
+
+  for block in section.blocks
+    case block.type
+      when 'product_grid'
+        assign paginate_by = block.settings.per_row | times: block.settings.rows_per_page
+    endcase
+  endfor
+-%}
+<section class="cf-collection-header cf-collection-header-{{ section.id }}" id="cf-collection-header">
+  <div class="cf-collection-header-row">
+    <div class="page-width">
+      <div class="cf-collection-header-wrap">
+        <div class="cf-page-content-collection-breadcrumbs-scroll">
+          {% render 'breadcrumbs' %}
+        </div>
+        <h3>{{ collection.title }}</h3>
+        <div>{{ collection.description }}</div>
+      </div>
+      {%- paginate collection.products by paginate_by -%}
+        {%- if paginate.current_page == 1 and current_filter_size == 0 -%}
+          {% if collection.metafields.custom.subcollection_visible %}
+            <div class="cf-collection-subcollection-wrap">
+              {%- render 'cf-subcollections', per_row: section.settings.subcollections_per_row -%}
+            </div>
+          {%- endif -%}
+        {%- endif -%}
+      {%- endpaginate -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "<> Collection Header",
+  "settings": [
+      {
+        "type": "paragraph",
+        "content": "t:sections.main-collection.blocks.subcollections.settings.content"
+      },
+      {
+        "type": "range",
+        "id": "subcollections_per_row",
+        "label": "t:sections.main-collection.blocks.subcollections.settings.subcollections_per_row.label",
+        "default": 6,
+        "min": 2,
+        "max": 6,
+        "step": 1
+      }
+  ],
+  "presets": [
+    {
+      "name": "<> Collection Header"
+    }
+  ]
+}
+{% endschema %}

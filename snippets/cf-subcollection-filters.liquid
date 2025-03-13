@@ -1,0 +1,14 @@
+{% if collection.metafields.custom.subcollection.value != blank %}
+  <div class="cf-subcollection-filters">
+    <h4 class="cf-filter-label">SHOP BY CATEGORY</h4>
+    <ul>
+      {%- for subcollection in collection.metafields.custom.subcollection.value -%}
+        <li>
+          <a href="{{ subcollection.url }}">
+            {{ subcollection.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

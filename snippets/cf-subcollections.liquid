@@ -1,0 +1,12 @@
+<div class="grid--uniform cf-grid--uniform-{% if collection.metafields.custom.subcollections_per_row != blank %}{{ collection.metafields.custom.subcollections_per_row }}{% else %}{{ per_row }}{% endif %} {% unless settings.collection_grid_gutter %} grid--no-gutters{% endunless %}">
+  {%- for subcollection in collection.metafields.custom.subcollection.value limit: per_row -%}
+    {%- render 'collection-grid-item',
+      collection: subcollection,
+      gridView: gridView,
+      collection_title: subcollection.title,
+      per_row: per_row,
+      sizeVariable: gridView,
+      fallback: 'variable'
+    -%}
+  {%- endfor -%}
+</div>

@@ -1,0 +1,70 @@
+{% style %}
+  #shopify-section-{{ section.id }} .page-width {
+    background: {{section.settings.bg_color}};
+  }
+{% endstyle %}
+
+<div class="cf-uvc-section" id="cf-uvc-section-{{ section.id }}">
+  <div class="cf-uvc-row">
+    <div class="page-width">
+      <div class="cf-uvc-wrap">
+        <ul>
+          {% for block in section.blocks %}
+            <li>
+              <a href="{{ block.settings.uvc_url }}">
+                {% if block.settings.uvc_image != blank %}
+                  <img src="{{ block.settings.uvc_image | img_url: 'master' }}" class="img-responsive">
+                {% endif %}
+                <span>{{ block.settings.uvc_text }}</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "<> Uvc Section",
+  "settings": [
+
+ {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#000000"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+        {
+          "type": "url",
+          "label": "Link Here",
+          "id": "uvc_url"
+        },
+        {
+          "type": "image_picker",
+          "label": "Image Here",
+          "id": "uvc_image"
+        },
+        {
+          "type": "richtext",
+          "label": "Text Here",
+          "id": "uvc_text",
+          "default": "<p>ALL CAVFAB PRODUCTS ARE 100% MADE IN THE USA</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Uvc Section"
+    }
+  ]
+}
+{% endschema %}

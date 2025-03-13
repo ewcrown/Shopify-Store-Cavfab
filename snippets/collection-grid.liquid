@@ -1,0 +1,206 @@
+{% comment %}
+  Snippet Arguments
+  - collection: Liquid 'collection' or 'search' object
+  - items: Paginated 'collection.products' or 'search.results' list. Cannot be pulled from the the 'collection' object passed in above
+  - enable_sidebar: boolean
+  - filter_style: 'sidebar' or 'drawer'
+  - enable_sort: boolean
+  - enable_collection_count
+  - per_row
+  - mobile_flush_grid
+  - quick_shop_enable
+{% endcomment %}
+
+{% liquid
+  if collection.products
+    assign count = collection.products_count
+    assign count_label = 'collections.general.items_with_count'
+  endif
+
+  if collection.results
+    assign count = collection.results_count
+    assign count_label = 'general.search.result_count'
+  endif
+
+  assign filters = collection.filters
+  assign sort_by = collection.sort_by
+  assign default_sort_by = collection.default_sort_by
+  assign sort_options = collection.sort_options
+  assign current_filter_size = 0
+
+  for filter in filters
+    assign current_filter_size = current_filter_size | plus: filter.active_values.size
+  endfor
+
+  for block in section.blocks
+    case block.type
+      when 'product_grid'
+        assign paginate_by = block.settings.per_row | times: block.settings.rows_per_page
+    endcase
+  endfor
+%}
+
+<div class="collection-grid__wrapper">
+  {% if collection.metafields.custom.subcollection_visible %}
+      <button
+        class="cf-collection-grid__wrapper-subcollections  btn btn--tertiary"
+        data-subcollection-button
+          {% liquid
+          unless current_tags
+            assign current_items = ''
+
+            for link in linklists['impulse-test-menu'].links
+              if link.active and link.levels > 0 and link.child_active == false
+                unless current_items contains link.title
+                  echo 'data-has-subcollections'
+                  assign current_items = current_items | append: link.title
+                endunless
+              endif
+              for sub_link in link.links
+                if sub_link.active and sub_link.levels > 0 and sub_link.child_active == false
+                  unless current_items contains sub_link.title
+                    echo 'data-has-subcollections'
+                    assign current_items = current_items | append: sub_link.title
+                  endunless
+                endif
+                for sub_sub_link in sub_link.links
+                  if sub_sub_link.active and sub_sub_link.url == sub_link.url
+                    unless current_items contains sub_sub_link.title
+                      echo 'data-has-subcollections'
+                      assign current_items = current_items | append: sub_sub_link.title
+                    endunless
+                  elsif sub_sub_link.active and sub_sub_link.levels > 0
+                    unless current_items contains sub_sub_link.title
+                      echo 'data-has-subcollections'
+                      assign current_items = current_items | append: sub_sub_link.title
+                    endunless
+                  endif
+                endfor
+              endfor
+            endfor
+          endunless
+        %}
+      >
+        <div class="cf-collection-grid__wrapper-subcollection-left">
+          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.65274C0 0.739803 0.739845 0 1.65212 0C2.56439 0 3.30423 0.739803 3.30423 1.65274C3.30423 2.56501 2.56439 3.30419 1.65212 3.30419C0.739845 3.30419 0 2.56501 0 1.65274ZM0 6.62267C0 5.70974 0.739845 4.97055 1.65212 4.97055C2.56439 4.97055 3.30423 5.70974 3.30423 6.62267C3.30423 7.53494 2.56439 8.27474 1.65212 8.27474C0.739845 8.27474 0 7.53494 0 6.62267ZM1.65212 9.9405C0.739845 9.9405 0 10.6803 0 11.5926C0 12.5048 0.739845 13.2447 1.65212 13.2447C2.56439 13.2447 3.30423 12.5048 3.30423 11.5926C3.30423 10.6803 2.56439 9.9405 1.65212 9.9405ZM6.00511 0.409788H17.7571C18.4431 0.409788 18.9995 0.966097 18.9995 1.65275C18.9995 2.33882 18.4431 2.89509 17.7571 2.89509H6.00511C5.31904 2.89509 4.76277 2.33882 4.76277 1.65275C4.76277 0.966097 5.31908 0.409788 6.00511 0.409788ZM17.7571 5.37967H6.00511C5.31908 5.37967 4.76277 5.93594 4.76277 6.62263C4.76277 7.3087 5.31904 7.86497 6.00511 7.86497H17.7571C18.4431 7.86497 18.9995 7.3087 18.9995 6.62263C18.9995 5.93594 18.4431 5.37967 17.7571 5.37967ZM6.00511 10.3502H17.7571C18.4431 10.3502 18.9995 10.9065 18.9995 11.5926C18.9995 12.2786 18.4431 12.8349 17.7571 12.8349H6.00511C5.31904 12.8349 4.76277 12.2786 4.76277 11.5926C4.76277 10.9065 5.31908 10.3502 6.00511 10.3502Z" fill="white"/>
+          </svg>
+          Subcategories
+        </div>
+        <div class="cf-collection-grid__wrapper-subcollection-right">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="7" viewBox="0 0 13 7" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.3577 0.287974C10.7751 -0.109529 11.4357 -0.0934296 11.8332 0.323931C12.2307 0.741292 12.2146 1.40187 11.7972 1.79937L7.11826 6.25571C7.06265 6.30933 7.00224 6.35569 6.93833 6.39468C6.64122 6.57628 6.27432 6.59505 5.96342 6.45407C5.8767 6.41475 5.79433 6.363 5.71906 6.29888L0.375036 1.84535C-0.0677338 1.47636 -0.127544 0.818304 0.241445 0.375534C0.610435 -0.0672359 1.26849 -0.127047 1.71126 0.241942L6.3485 4.10645L10.3577 0.287974Z" fill="white"/>
+          </svg>
+        </div>
+      </button>
+{% endif %}
+  <div class="collection-filter">
+    <div class="collection-filter__item collection-filter__item--drawer">
+      <button
+        type="button"
+        class="js-drawer-open-collection-filters btn btn--tertiary{% unless current_filter_size == 0 %} btn--tertiary-active{% endunless %}"
+        aria-controls="FilterDrawer"
+      >
+        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-filter" viewBox="0 0 64 64">
+          <title>icon-filter</title><path d="M48 42h10m-10 0a5 5 0 1 1-5-5 5 5 0 0 1 5 5ZM7 42h31M16 22H6m10 0a5 5 0 1 1 5 5 5 5 0 0 1-5-5Zm41 0H26"/>
+        </svg>
+        {{ 'collections.filters.title_tags' | t }}
+        {%- if current_filter_size > 0 -%}
+          ({{ current_filter_size }})
+        {%- endif -%}
+      </button>
+    </div>
+
+    <div class="collection-filter__item collection-filter__item--count small--hide">
+      {%- if enable_collection_count -%}
+        {{ count_label | t: count: count }}
+      {%- endif -%}
+    </div>
+
+    <div class="collection-filter__item collection-filter__item--sort">
+      <div class="collection-filter__sort-container">
+        {%- assign sort_by = sort_by | default: default_sort_by -%}
+        <label for="SortBy" class="hidden-label">{{ 'collections.sorting.title' | t }}</label>
+        <select name="SortBy" id="SortBy" data-default-sortby="{{ default_sort_by }}">
+          <option
+            value="title-ascending"
+            {% if sort_by == default_sort_by %}
+              selected="selected"
+            {% endif %}
+          >
+            {{ 'collections.sorting.title' | t }}
+          </option>
+          {%- for option in sort_options -%}
+            <option
+              value="{{ option.value }}"
+              {% if option.value == sort_by %}
+                selected="selected"
+              {% endif %}
+            >
+              {{ option.name }}
+            </option>
+          {%- endfor -%}
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="grid grid--uniform{% if mobile_flush_grid %} small--grid--flush{% endif %}"
+    {% unless enable_collection_count %}
+      data-scroll-to
+    {% endunless %}
+  >
+    {%- for item in items -%}
+      {%- if item.object_type == 'product' -%}
+        {%- render 'product-grid-item', product: item, per_row: per_row, quick_shop_enable: quick_shop_enable -%}
+      {%- else -%}
+        {%- render 'search-grid-item', item: item, per_row: per_row %}
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{%- if enable_sidebar and filter_style != 'drawer' and collection.filters.size > 0 -%}
+  {% comment %}
+    Sidebar enabled but not in drawer mode, only show filter button on mobile
+  {% endcomment %}
+  {% style %}
+    @media screen and (min-width: 769px) {
+      .collection-filter__item--drawer {
+        display: none;
+      }
+      .collection-filter__item--count {
+        text-align: left;
+      }
+      html[dir="rtl"] .collection-filter__item--count {
+        text-align: right;
+      }
+    }
+  {% endstyle %}
+{%- endif -%}
+
+{%- if enable_sidebar == false or collection.filters.size == 0 -%}
+  {% comment %}
+    Disable sidebar & filter features
+  {% endcomment %}
+  {% style %}
+    .collection-filter__item--drawer {
+      display: none;
+    }
+    .collection-filter__item--count {
+      text-align: left;
+    }
+    html[dir="rtl"] .collection-filter__item--count {
+      text-align: right;
+    }
+  {% endstyle %}
+{%- endif -%}
+
+{%- unless enable_sort -%}
+  {% style %}
+    .collection-filter__sort-container {
+      display: none;
+    }
+  {% endstyle %}
+{%- endunless -%}

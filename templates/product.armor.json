@@ -1,0 +1,248 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "uvc_block_yVdGrC": {
+          "type": "uvc_block",
+          "settings": {
+            "uvc_url1": "",
+            "uvc_image1": "shopify://shop_images/Ellipse_22.png",
+            "uvc_text1": "ALL CAVFAB PRODUCTS ARE 100% MADE IN THE USA",
+            "uvc_url2": "",
+            "uvc_image2": "shopify://shop_images/Ellipse_22_2.png",
+            "uvc_text2": "All Products Backed By Our NO BS Warranty"
+          }
+        }
+      },
+      "block_order": [
+        "price",
+        "separator",
+        "variant_picker",
+        "buy_buttons",
+        "uvc_block_yVdGrC"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_height": "fixed",
+        "thumbnail_arrows": true,
+        "mobile_layout": "full",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "blocks": {
+        "description_qaRmc3": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "tab_EYGCXc": {
+          "type": "tab",
+          "settings": {
+            "title": "SPECIFICATIONS & INSTALLATION",
+            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
+            "metafields_data": "<div class=\"product-files\">\n  <div class=\"file-item\">\n    <h3>Product Specifications</h3>\n    {% if product.metafields.custom.product_specification %}\n      <a class=\"cf-download-button\" href=\"{{ product.metafields.custom.product_specification | file_url }}\" target=\"_blank\" rel=\"noopener noreferrer\">\n        Download\n<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"22\" height=\"22\" viewBox=\"0 0 22 22\" fill=\"none\">\n  <path d=\"M18.3333 0H3.66666C1.64257 0.00232032 0.00232032 1.64257 0 3.66666V18.3333C0.00232032 20.3574 1.64257 21.9977 3.66666 22H18.3333C20.3574 21.9977 21.9977 20.3574 22 18.3333V3.66666C21.9977 1.64257 20.3574 0.00232032 18.3333 0ZM7.60187 9.43523C7.95985 9.0773 8.54014 9.0773 8.89816 9.43523L10.0834 10.6205V5.50001C10.0834 4.99375 10.4938 4.58336 11 4.58336C11.5063 4.58336 11.9167 4.99375 11.9167 5.50001V10.6205L13.1019 9.43523C13.4644 9.08181 14.0448 9.0892 14.3982 9.45168C14.7453 9.80768 14.7453 10.3755 14.3982 10.7315L11.6487 13.4809C11.3054 13.8347 10.6946 13.8346 10.3514 13.4809L7.60192 10.7315C7.24399 10.3735 7.24399 9.79316 7.60187 9.43523ZM14.6667 17.4167H7.33336C5.81527 17.415 4.58503 16.1848 4.58336 14.6667C4.58336 14.1604 4.99375 13.75 5.50001 13.75C6.00627 13.75 6.41666 14.1604 6.41666 14.6667C6.41722 15.1727 6.82732 15.5828 7.33332 15.5833H14.6667C15.1727 15.5828 15.5828 15.1727 15.5833 14.6667C15.5833 14.1604 15.9937 13.75 16.5 13.75C17.0062 13.75 17.4166 14.1604 17.4166 14.6667C17.415 16.1848 16.1848 17.415 14.6667 17.4167Z\" fill=\"#CA4E28\"/>\n</svg>\n      </a>\n    {% else %}\n      <span>No file available</span>\n    {% endif %}\n  </div>\n  <div class=\"file-item\">\n    <h3>Assembly Instructions</h3>\n    {% if product.metafields.custom.assembly_instructions %}\n      <a class=\"cf-download-button\" href=\"{{ product.metafields.custom.assembly_instructions | file_url }}\" target=\"_blank\" rel=\"noopener noreferrer\">\n        Download\n<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"22\" height=\"22\" viewBox=\"0 0 22 22\" fill=\"none\">\n  <path d=\"M18.3333 0H3.66666C1.64257 0.00232032 0.00232032 1.64257 0 3.66666V18.3333C0.00232032 20.3574 1.64257 21.9977 3.66666 22H18.3333C20.3574 21.9977 21.9977 20.3574 22 18.3333V3.66666C21.9977 1.64257 20.3574 0.00232032 18.3333 0ZM7.60187 9.43523C7.95985 9.0773 8.54014 9.0773 8.89816 9.43523L10.0834 10.6205V5.50001C10.0834 4.99375 10.4938 4.58336 11 4.58336C11.5063 4.58336 11.9167 4.99375 11.9167 5.50001V10.6205L13.1019 9.43523C13.4644 9.08181 14.0448 9.0892 14.3982 9.45168C14.7453 9.80768 14.7453 10.3755 14.3982 10.7315L11.6487 13.4809C11.3054 13.8347 10.6946 13.8346 10.3514 13.4809L7.60192 10.7315C7.24399 10.3735 7.24399 9.79316 7.60187 9.43523ZM14.6667 17.4167H7.33336C5.81527 17.415 4.58503 16.1848 4.58336 14.6667C4.58336 14.1604 4.99375 13.75 5.50001 13.75C6.00627 13.75 6.41666 14.1604 6.41666 14.6667C6.41722 15.1727 6.82732 15.5828 7.33332 15.5833H14.6667C15.1727 15.5828 15.5828 15.1727 15.5833 14.6667C15.5833 14.1604 15.9937 13.75 16.5 13.75C17.0062 13.75 17.4166 14.1604 17.4166 14.6667C17.415 16.1848 16.1848 17.415 14.6667 17.4167Z\" fill=\"#CA4E28\"/>\n</svg>\n      </a>\n    {% else %}\n      <span>No file available</span>\n    {% endif %}\n  </div>\n</div>",
+            "page": ""
+          }
+        },
+        "tab_prxrXD": {
+          "type": "tab",
+          "settings": {
+            "title": "SHIPPING INFORMATION",
+            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
+            "metafields_data": "",
+            "page": ""
+          }
+        },
+        "tab_86TkWT": {
+          "type": "tab",
+          "settings": {
+            "title": "ASK A QUESTION",
+            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
+            "metafields_data": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "description_qaRmc3",
+        "tab_EYGCXc",
+        "tab_prxrXD",
+        "tab_86TkWT"
+      ],
+      "settings": {
+        "max_width": true
+      }
+    },
+    "rich_text_Cgi8XF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_XDqwnW": {
+          "type": "heading",
+          "settings": {
+            "title": "BUILT FOR STYLE & STRENGTH"
+          }
+        }
+      },
+      "block_order": [
+        "heading_XDqwnW"
+      ],
+      "custom_css": [
+        ".text-center {background: #000; padding-top: 42px; padding-bottom: 75px;}",
+        ".text-center h2 {margin: 0;}"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
+    "hotspots_dMdEDX": {
+      "type": "hotspots",
+      "blocks": {
+        "paragraph_jcxUFB": {
+          "type": "paragraph",
+          "settings": {
+            "subheading": "",
+            "heading": "High Quality Material",
+            "content": "<p>.063\" Aluminum Construction</p>",
+            "button_text": "",
+            "button_link": "",
+            "vertical": 63,
+            "horizontal": 57
+          }
+        },
+        "paragraph_7JUtBz": {
+          "type": "paragraph",
+          "settings": {
+            "subheading": "",
+            "heading": "Assembly",
+            "content": "<p>All mounting hardware included, no drilling required.</p>",
+            "button_text": "",
+            "button_link": "",
+            "vertical": 19,
+            "horizontal": 66
+          }
+        },
+        "paragraph_NBcKJt": {
+          "type": "paragraph",
+          "settings": {
+            "subheading": "",
+            "heading": "Perfect Fit",
+            "content": "<p>Engineered for precise fitment</p>",
+            "button_text": "",
+            "button_link": "",
+            "vertical": 54,
+            "horizontal": 30
+          }
+        }
+      },
+      "block_order": [
+        "paragraph_jcxUFB",
+        "paragraph_7JUtBz",
+        "paragraph_NBcKJt"
+      ],
+      "custom_css": [
+        "div.index-section {background-color: #000000;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "heading_position": "center",
+        "image": "shopify://shop_images/Pointout_Armor.png",
+        "indent_image": false,
+        "image_position": "left",
+        "hotspot_style": "plus",
+        "hotspot_color": "#ca4e28",
+        "lazyload_images": true
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 6,
+        "products_per_row": 3
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "recent_count": 5
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {}
+    },
+    "background_video_text_4dJzT6": {
+      "type": "background-video-text",
+      "settings": {
+        "subtitle": "",
+        "title": "100% MADE IN THE USA",
+        "text": "<p>Our products are fabricated by a world class team of American craftsmen.</p>",
+        "button_label": "",
+        "button_link": "",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/94fb543e53544aa9925d66160d81c727.mp4",
+        "color_border": "#f4f4f4",
+        "layout": "left",
+        "height": 550
+      }
+    }
+  },
+  "order": [
+    "main",
+    "sub",
+    "rich_text_Cgi8XF",
+    "hotspots_dMdEDX",
+    "product-recommendations",
+    "recently-viewed",
+    "collection-return",
+    "background_video_text_4dJzT6"
+  ]
+}

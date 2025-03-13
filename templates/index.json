@@ -1,0 +1,349 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "cf_two_columns_zhj9G8": {
+      "type": "cf-two-columns",
+      "blocks": {
+        "card_MpPje4": {
+          "type": "card",
+          "settings": {
+            "background_color": "#ca4e28",
+            "background_image": "shopify://shop_images/topograph_texture_1_e811c304-9560-4e73-97b8-fb06ffb909cb_1.png",
+            "title": "TRAVEL FARTHER.<br>HIT THE TRAIL HARDER.",
+            "heading_color": "#ffffff",
+            "heading_font_size": 36,
+            "description": "Designed for adventure and resilience, our aftermarket Jeep products are built in the USA, engineered to push the limits, conquer extreme terrain, and embrace the freedom of the trail.",
+            "description_color": "#ffffff",
+            "description_font_size": 17,
+            "btn_url": "shopify://collections/shop-by-vehicle",
+            "btn_text": "SHOP BY VEHICLE",
+            "link_color": "#000000",
+            "link_background_color": "#ffffff",
+            "link_font_size": 20,
+            "link_hover_color": "#ffffff",
+            "link_hover_background_color": "#000000"
+          }
+        },
+        "card_MNenhM": {
+          "type": "card",
+          "settings": {
+            "background_video": "shopify://files/videos/Hero Video with New Footage 2nd Compression.mp4",
+            "background_color": "rgba(0,0,0,0)",
+            "background_image": "shopify://shop_images/image_3.png",
+            "title": "",
+            "heading_color": "#ca4e28",
+            "heading_font_size": 36,
+            "description": "",
+            "description_color": "#ca4e28",
+            "description_font_size": 36,
+            "btn_url": "",
+            "btn_text": "",
+            "link_color": "#ca4e28",
+            "link_background_color": "#ca4e28",
+            "link_font_size": 36,
+            "link_hover_color": "#ca4e28",
+            "link_hover_background_color": "#ca4e28"
+          }
+        }
+      },
+      "block_order": [
+        "card_MpPje4",
+        "card_MNenhM"
+      ],
+      "settings": {}
+    },
+    "featured_collections_6HEJYJ": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_tURTQG": {
+          "type": "collection",
+          "settings": {
+            "collection": "bumpers-armor",
+            "title": "BUMPERS / ARMOR",
+            "focal_point": "center center"
+          }
+        },
+        "collection_NgKb8H": {
+          "type": "collection",
+          "settings": {
+            "collection": "steering-and-suspension",
+            "title": "STEERING / SUSPENSION",
+            "focal_point": "center center"
+          }
+        },
+        "collection_kYQAry": {
+          "type": "collection",
+          "settings": {
+            "collection": "axle-differential",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "collection_YtDQp7": {
+          "type": "collection",
+          "settings": {
+            "collection": "diy-builder-parts",
+            "title": "",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "collection_tURTQG",
+        "collection_NgKb8H",
+        "collection_kYQAry",
+        "collection_YtDQp7"
+      ],
+      "settings": {
+        "card_height": 341,
+        "bg_color": "#000000",
+        "class": "",
+        "title": "",
+        "title_font_size": 24,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud",
+        "divider": false,
+        "per_row": 4,
+        "enable_gutter": true
+      }
+    },
+    "text_and_image_hhraea": {
+      "type": "text-and-image",
+      "settings": {
+        "bg_color": "#000000",
+        "feature_text_flex_basis": 46,
+        "feature_images_flex_basis": 54,
+        "section_padding_bottom": 90,
+        "feature_row_padding_left": 0,
+        "paragraph_width": 98,
+        "title_font_size": 36,
+        "description_font_size": 17,
+        "button_text_font_size": 20,
+        "button_color_bg": "#ffffff",
+        "button_hover_bg": "#ffffff",
+        "button_color": "#ffffff",
+        "button_hover": "#ffffff",
+        "image": "shopify://shop_images/about_us_section_jeep_1_2.png",
+        "image_mask": "none",
+        "image2": "shopify://shop_images/about_cavfab_2.png",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "HARDCORE PARTS. MADE IN HOUSE.",
+        "text": "<p>Since 2016, we have been manufacturing hardcore products for enthusiasts that demand the utmost strength and style. Our goal has always been, and always will be, to produce the highest quality products for your Jeep, right here in the USA.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": false,
+        "bottom_padding": false,
+        "lazyload_images": true
+      }
+    },
+    "cf_uvc_section_NrWA8D": {
+      "type": "cf-uvc-section",
+      "blocks": {
+        "column_hBHAFN": {
+          "type": "column",
+          "settings": {
+            "uvc_url": "",
+            "uvc_image": "shopify://shop_images/Ellipse_22.png",
+            "uvc_text": "<p>ALL CAVFAB PRODUCTS ARE 100% MADE IN THE USA</p>"
+          }
+        },
+        "column_UbRGtE": {
+          "type": "column",
+          "settings": {
+            "uvc_url": "",
+            "uvc_image": "shopify://shop_images/Ellipse_22_1.png",
+            "uvc_text": "<p>BUY NOW, PAY LATER WITH SHOP PAY</p>"
+          }
+        },
+        "column_Jp8CzJ": {
+          "type": "column",
+          "settings": {
+            "uvc_url": "",
+            "uvc_image": "shopify://shop_images/Ellipse_22_2.png",
+            "uvc_text": "<p>All products are backed by a 30-day unlimited warranty</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_hBHAFN",
+        "column_UbRGtE",
+        "column_Jp8CzJ"
+      ],
+      "settings": {
+        "bg_color": "#000000"
+      }
+    },
+    "featured-collections": {
+      "type": "featured-collections",
+      "blocks": {
+        "featured-collections-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "jeep-gladiator-jt",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "featured-collections-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "jeep-wrangler-jl",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "featured-collections-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "jeep-wrangler-jk",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "collection_Rq4BE7": {
+          "type": "collection",
+          "settings": {
+            "collection": "jeep-wrangler-tj",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "collection_jkHxmW": {
+          "type": "collection",
+          "settings": {
+            "collection": "jeep-cherokee-xj",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "collection_rJPhJw": {
+          "type": "collection",
+          "settings": {
+            "collection": "jeep-other",
+            "title": "",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "featured-collections-0",
+        "featured-collections-1",
+        "featured-collections-3",
+        "collection_Rq4BE7",
+        "collection_jkHxmW",
+        "collection_rJPhJw"
+      ],
+      "settings": {
+        "card_height": 341,
+        "bg_color": "#272427",
+        "class": "cf-vehicles-shop",
+        "title": "SHOP BY VEHICLE",
+        "title_font_size": 24,
+        "description": "Whether you’re rocking the latest model or going OG with one of the classics we have a range of products to fit your needs. Check out our product lines below based on the rig your running.",
+        "divider": false,
+        "per_row": 3,
+        "enable_gutter": true
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "bg_color": "#000000",
+        "title": "BEST SELLERS",
+        "home_featured_products": "armor-accessories",
+        "per_row": 4,
+        "rows": 5,
+        "mobile_scrollable": false,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "rich_text_VrUBDr": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_6WQVyw": {
+          "type": "heading",
+          "settings": {
+            "title": "QUALITY YOU CAN TRUST"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6WQVyw"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Orbitron\", serif; font-weight: 700; font-size: 28px; margin-top: 33px;}"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "1740413287e2e345d3": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_6yG4RF": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1489
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_6yG4RF"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "173687820014bf2a97": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_3XxXmJ": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "alignment": "center",
+            "background_color": "rgba(0,0,0,0)",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_3XxXmJ"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    }
+  },
+  "order": [
+    "cf_two_columns_zhj9G8",
+    "featured_collections_6HEJYJ",
+    "text_and_image_hhraea",
+    "cf_uvc_section_NrWA8D",
+    "featured-collections",
+    "featured-collection",
+    "rich_text_VrUBDr",
+    "1740413287e2e345d3",
+    "173687820014bf2a97"
+  ]
+}

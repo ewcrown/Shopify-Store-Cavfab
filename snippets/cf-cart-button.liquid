@@ -1,0 +1,17 @@
+<div class="cf-grid-product__add-to-cart">
+  {% if product.variants.size > 1 %}
+    <button
+      class="cf-primary-button cf-grid-product__add-to-cart--button"
+    >
+      Choose Option
+    </button>
+  {% else %}
+    <button
+      class="cf-primary-button cf-grid-product__add-to-cart--button"
+      data-id="{{ product.selected_or_first_available_variant.id }}"
+      cf-cart-button
+    >
+      Add To Cart
+    </button>
+  {% endif %}
+</div>
