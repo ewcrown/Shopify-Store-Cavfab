@@ -11,19 +11,41 @@
   "sections": {
     "main": {
       "type": "blog-template",
+      "settings": {}
+    },
+    "featured-collections": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection1": {
+          "type": "collection",
+          "settings": {}
+        },
+        "collection2": {
+          "type": "collection",
+          "settings": {}
+        },
+        "collection3": {
+          "type": "collection",
+          "settings": {}
+        },
+        "collection4": {
+          "type": "collection",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "collection1",
+        "collection2",
+        "collection3",
+        "collection4"
+      ],
       "settings": {
-        "blog_show_tag_filter": false,
-        "blog_show_rss": false,
-        "blog_show_tags": false,
-        "blog_show_date": true,
-        "blog_show_comments": true,
-        "blog_show_author": false,
-        "blog_show_excerpt": false,
-        "blog_image_size": "wide"
+        "title": "You may also like"
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "featured-collections"
   ]
 }

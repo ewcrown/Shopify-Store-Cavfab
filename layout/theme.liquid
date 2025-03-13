@@ -14,19 +14,10 @@
     <link rel="dns-prefetch" href="https://maps.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Ovo&display=swap"
-      rel="stylesheet"
-    >
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Ovo&display=swap"
-      rel="stylesheet"
-    >
-    <link
-      href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Orbitron:wght@400..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Ovo&display=swap"
-      rel="stylesheet"
-    >
-
+    <link rel="preload" as="style" onload="this.rel'stylesheet'" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Ovo&display=swap" />
+    <link rel="preload" as="style" onload="this.rel'stylesheet'" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Ovo&display=swap" />
+    <link rel="preload" as="style" onload="this.rel'stylesheet'" href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Orbitron:wght@400..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Ovo&display=swap" />
+    
     {%- if settings.favicon != blank -%}
       <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
     {%- endif -%}
@@ -115,8 +106,12 @@
     {{ 'cf-styles.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'cf-product.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'cf-media-queries.css' | asset_url | stylesheet_tag: preload: true }}
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
+    <link href="{{'app.js' | asset\_url }}"as="script"type="text/javascript">
+
+    
+    {{ 'splide.min.css' | asset_url | stylesheet_tag: preload: true }}
+    
   </head>
 
   <body
@@ -173,6 +168,7 @@
       </div>
     </template>
 
+    
     {{ 'cf-custom.js' | asset_url | script_tag }}
   </body>
 </html>

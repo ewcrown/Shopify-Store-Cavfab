@@ -2,9 +2,6 @@
   predictive-search {
     margin-top: -95px !important;
   }
-  .template-search .search-content predictive-search {
-    margin-top: 0 !important;
-  }
 }
 @media only screen and (max-width: 1200px) {
  predictive-search {
@@ -283,8 +280,7 @@
   }
   .cf-header-bottombar .page-width {
     background: #403e3f;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px !important;
   }
   .cf-header-bottombar p {
     color: #fff;

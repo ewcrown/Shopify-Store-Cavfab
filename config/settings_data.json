@@ -36,7 +36,7 @@
     "color_image_overlay": "#000000",
     "color_image_overlay_opacity": 15,
     "color_image_overlay_text_shadow": 30,
-    "type_header_font_family": "rajdhani_n7",
+    "type_header_font_family": "fjalla_one_n4",
     "type_header_spacing": "150",
     "type_header_base_size": 45,
     "type_header_line_height": 1.2,
@@ -177,12 +177,7 @@
     "blocks": {
       "11724500921838622758": {
         "type": "shopify://apps/frequently-bought/blocks/app-embed-block/b1a8cbea-c844-4842-9529-7c62dbab1b1f",
-        "disabled": false,
-        "settings": {}
-      },
-      "14060646107696862457": {
-        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
       }
     }
@@ -633,8 +628,5 @@
         }
       }
     }
-  },
-  "platform_customizations": {
-    "custom_css": []
   }
 }

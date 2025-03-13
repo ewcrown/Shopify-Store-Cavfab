@@ -3,7 +3,7 @@
     .cf-two-column-card-{{ block.id }} .cf-two-columns-content {
       background-color:{{ block.settings.background_color }};
       {% if block.settings.background_video == blank %}
-        background-image: url({{ block.settings.background_image | image_url: width: 800, height: 800}});
+        background-image: url({{ block.settings.background_image | image_url: width: 750, height: 500 }});
         background-size:cover;
         background-repeat:no-repeat;
       {% endif %}
