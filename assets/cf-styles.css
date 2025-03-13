@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Orbitron:wght@400..900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
 
+.pswp__scroll-wrap {
+  background: rgba(0, 0, 0, 0.5);
+}
+
 #PageContainer {
   background-image: url("https://cdn.shopify.com/s/files/1/0566/4374/7989/files/body-bg.webp");
   background-color: #000;

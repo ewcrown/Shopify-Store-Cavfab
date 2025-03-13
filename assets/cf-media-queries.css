@@ -507,7 +507,7 @@
     padding-top: 68px;
   }
   .product__photos .product__main-photos .image-wrap {
-    padding-bottom: 120% !important;
+    padding-bottom: 100% !important;
   }
   .page-content--product .grid__item:not(.product-single__sticky) {
     width: 100%;
@@ -528,6 +528,9 @@
   }
 }
 @media only screen and (max-width: 600px) {
+  .product__photos-template--18934658564348__main .product__thumbs:not(.product__thumbs--below) {
+    min-height: 74px !important;
+  }
   .predictive-overflow-hidden .header-layout.header-layout--left-center {
     display: none;
   }
