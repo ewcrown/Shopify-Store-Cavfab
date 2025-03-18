@@ -16,8 +16,8 @@
           "type": "card",
           "settings": {
             "background_color": "#ca4e28",
-            "background_image": "shopify://shop_images/topograph.webp",
-            "title": "TRAVEL FARTHER.HIT THE TRAIL HARDER.",
+            "background_image": "shopify://shop_images/topograph_texture_1_e811c304-9560-4e73-97b8-fb06ffb909cb_1.png",
+            "title": "TRAVEL FARTHER.<br>HIT THE TRAIL HARDER.",
             "heading_color": "#ffffff",
             "heading_font_size": 36,
             "description": "Designed for adventure and resilience, our aftermarket Jeep products are built in the USA, engineered to push the limits, conquer extreme terrain, and embrace the freedom of the trail.",
@@ -173,7 +173,7 @@
           "settings": {
             "uvc_url": "",
             "uvc_image": "shopify://shop_images/Ellipse_22_2.png",
-            "uvc_text": "<p>All products backed by our NO BS Warranty</p>"
+            "uvc_text": "<p>All products are backed by a 30-day unlimited warranty</p>"
           }
         }
       },
@@ -271,13 +271,44 @@
         "divider": false
       }
     },
-    "cf_review_section_ajri8C": {
-      "type": "cf-review-section",
-      "disabled": true,
+    "rich_text_VrUBDr": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_6WQVyw": {
+          "type": "heading",
+          "settings": {
+            "title": "QUALITY YOU CAN TRUST"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6WQVyw"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Orbitron\", serif; font-weight: 700; font-size: 28px; margin-top: 33px;}"
+      ],
       "settings": {
-        "bg_color": "#000000",
-        "title": "QUALITY YOU CAN TRUST",
-        "review_shortcode": ""
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "1740413287e2e345d3": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_6yG4RF": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1489
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_6yG4RF"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
       }
     },
     "173687820014bf2a97": {
@@ -311,7 +342,8 @@
     "cf_uvc_section_NrWA8D",
     "featured-collections",
     "featured-collection",
-    "cf_review_section_ajri8C",
+    "rich_text_VrUBDr",
+    "1740413287e2e345d3",
     "173687820014bf2a97"
   ]
 }

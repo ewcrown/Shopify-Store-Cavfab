@@ -1055,6 +1055,7 @@
     width: 72px;
   }
 
+  .product__main-photos,
   .product__main-photos * {
     height: 400px !important;
   }

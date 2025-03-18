@@ -12,6 +12,14 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "judge_me_reviews_preview_badge_GpFxxH": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "separator_4KAnCz": {
+          "type": "separator",
+          "settings": {}
+        },
         "price": {
           "type": "price",
           "settings": {}
@@ -27,6 +35,14 @@
             "picker_type": "button",
             "product_dynamic_variants_enable": true,
             "color_swatches": false
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "globe",
+            "text": "Free worldwide shipping"
           }
         },
         "buy_buttons": {
@@ -45,14 +61,17 @@
             "uvc_text1": "ALL CAVFAB PRODUCTS ARE 100% MADE IN THE USA",
             "uvc_url2": "",
             "uvc_image2": "shopify://shop_images/Ellipse_22_2.png",
-            "uvc_text2": "All Products Backed By Our NO BS Warranty"
+            "uvc_text2": "All products are backed by a 30-day unlimited warranty"
           }
         }
       },
       "block_order": [
+        "judge_me_reviews_preview_badge_GpFxxH",
+        "separator_4KAnCz",
         "price",
         "separator",
         "variant_picker",
+        "sales_point",
         "buy_buttons",
         "uvc_block_yVdGrC"
       ],
@@ -91,7 +110,7 @@
           "type": "tab",
           "settings": {
             "title": "SHIPPING INFORMATION",
-            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
+            "content": "<p>Here at CavFab we utilize UPS Ground and USPS Priority shipping. Once your order ships, you’ll receive an email with your shipping details and tracking number. This way, you can follow your order until it arrives at your door. If you have any questions about your shipment, feel free to reach out to us at info@cavfab.com. </p>",
             "metafields_data": "",
             "page": ""
           }
@@ -100,7 +119,7 @@
           "type": "tab",
           "settings": {
             "title": "ASK A QUESTION",
-            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
+            "content": "<p>Have questions about this product? We’re here to help! Whether you need more details, advise on compatibility, or assistance in deciding if this is the right fit for your build, reach out to us. Email us anytime at info@cavfab.com, and our team will get back to you with the answers you need to make your purchase with confidence.</p>",
             "metafields_data": "",
             "page": ""
           }
@@ -114,87 +133,6 @@
       ],
       "settings": {
         "max_width": true
-      }
-    },
-    "rich_text_Cgi8XF": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_XDqwnW": {
-          "type": "heading",
-          "settings": {
-            "title": "BUILT FOR STYLE & STRENGTH"
-          }
-        }
-      },
-      "block_order": [
-        "heading_XDqwnW"
-      ],
-      "custom_css": [
-        ".text-center {background: #000; padding-top: 42px; padding-bottom: 75px;}",
-        ".text-center h2 {margin: 0;}"
-      ],
-      "settings": {
-        "align_text": "center",
-        "narrow_column": false,
-        "divider": false
-      }
-    },
-    "hotspots_dMdEDX": {
-      "type": "hotspots",
-      "blocks": {
-        "paragraph_jcxUFB": {
-          "type": "paragraph",
-          "settings": {
-            "subheading": "",
-            "heading": "High Quality Material",
-            "content": "<p>.063\" Aluminum Construction</p>",
-            "button_text": "",
-            "button_link": "",
-            "vertical": 63,
-            "horizontal": 57
-          }
-        },
-        "paragraph_7JUtBz": {
-          "type": "paragraph",
-          "settings": {
-            "subheading": "",
-            "heading": "Assembly",
-            "content": "<p>All mounting hardware included, no drilling required.</p>",
-            "button_text": "",
-            "button_link": "",
-            "vertical": 19,
-            "horizontal": 66
-          }
-        },
-        "paragraph_NBcKJt": {
-          "type": "paragraph",
-          "settings": {
-            "subheading": "",
-            "heading": "Perfect Fit",
-            "content": "<p>Engineered for precise fitment</p>",
-            "button_text": "",
-            "button_link": "",
-            "vertical": 54,
-            "horizontal": 30
-          }
-        }
-      },
-      "block_order": [
-        "paragraph_jcxUFB",
-        "paragraph_7JUtBz",
-        "paragraph_NBcKJt"
-      ],
-      "custom_css": [],
-      "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "heading_position": "center",
-        "image": "shopify://shop_images/Pointout_Armor.png",
-        "indent_image": false,
-        "image_position": "left",
-        "hotspot_style": "plus",
-        "hotspot_color": "#ca4e28",
-        "lazyload_images": true
       }
     },
     "product-recommendations": {
@@ -218,6 +156,50 @@
       "disabled": true,
       "settings": {}
     },
+    "hotspots_MtjLwr": {
+      "type": "hotspots",
+      "blocks": {
+        "paragraph_YjzztP": {
+          "type": "paragraph",
+          "settings": {
+            "subheading": "",
+            "heading": "Lorem Ipsum",
+            "content": "<p>Lorem ipsum lorem ipsum lorem ipsum</p>",
+            "button_text": "",
+            "button_link": "",
+            "vertical": 16,
+            "horizontal": 72
+          }
+        },
+        "paragraph_J8jRDh": {
+          "type": "paragraph",
+          "settings": {
+            "subheading": "",
+            "heading": "Lorem Ipsum 2",
+            "content": "<p>Lorem ipsum lorem ipsum lorem ipsum</p>",
+            "button_text": "",
+            "button_link": "",
+            "vertical": 50,
+            "horizontal": 50
+          }
+        }
+      },
+      "block_order": [
+        "paragraph_YjzztP",
+        "paragraph_J8jRDh"
+      ],
+      "settings": {
+        "title": "Shop the look",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "image": "shopify://shop_images/Pointout_Armor.png",
+        "indent_image": false,
+        "image_position": "left",
+        "hotspot_style": "plus",
+        "hotspot_color": "#ca4e28",
+        "lazyload_images": true
+      }
+    },
     "background_video_text_4dJzT6": {
       "type": "background-video-text",
       "settings": {
@@ -231,16 +213,35 @@
         "layout": "left",
         "height": 550
       }
+    },
+    "1740408979fad190f3": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_AUNFQW": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_AUNFQW"
+      ],
+      "custom_css": [
+        "#shopify-block-AZG9MRHBQL08yU0hse__judge_me_reviews_review_widget_AUNFQW {background-color: #000000;}"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
     }
   },
   "order": [
     "main",
     "sub",
-    "rich_text_Cgi8XF",
-    "hotspots_dMdEDX",
     "product-recommendations",
     "recently-viewed",
     "collection-return",
-    "background_video_text_4dJzT6"
+    "hotspots_MtjLwr",
+    "background_video_text_4dJzT6",
+    "1740408979fad190f3"
   ]
 }

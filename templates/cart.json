@@ -15,18 +15,14 @@
     },
     "recently-viewed": {
       "type": "recently-viewed",
-      "settings": {}
-    },
-    "featured-collection": {
-      "type": "featured-collection",
+      "disabled": true,
       "settings": {
-        "title": "Popular picks"
+        "recent_count": 5
       }
     }
   },
   "order": [
     "main",
-    "recently-viewed",
-    "featured-collection"
+    "recently-viewed"
   ]
 }
